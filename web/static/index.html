@@ -8,39 +8,53 @@
 </head>
 <body>
 <header>
-  <h1>👗 Fashion Affiliate Studio</h1>
-  <p>Video sản phẩm affiliate cho TikTok và Facebook Reels — dọc 9:16, giữ nguyên sản phẩm, không chữ, không phụ đề, không lời dẫn trừ khi bạn dặn.</p>
-  <p class="note">Giao diện này chỉ quản lý job, prompt và kết quả. Video vẫn tạo trong chat với Muse (ảnh nhân vật trước, ảnh sản phẩm sau, rồi prompt), rồi ghép ở đây. Không đăng nhập, không gửi cookie hay key.</p>
+  <div class="wrap brand">
+    <div class="brand-mark">F</div>
+    <div class="brand-text">
+      <h1>Fashion Affiliate Studio</h1>
+      <p class="tagline">Video sản phẩm affiliate cho TikTok và Facebook Reels — dọc 9:16, giữ nguyên sản phẩm, không chữ, không phụ đề, không lời dẫn trừ khi bạn dặn.</p>
+      <p class="note">Giao diện này chỉ quản lý job, prompt và kết quả. Video vẫn tạo trong chat với Muse (ảnh nhân vật trước, ảnh sản phẩm sau, rồi prompt), rồi ghép ở đây. Không đăng nhập, không gửi cookie hay key.</p>
+    </div>
+    <span class="badge">Chạy local · Offline</span>
+  </div>
 </header>
 <nav id="tabs">
-  <button data-tab="overview" class="active">Tổng quan</button>
-  <button data-tab="create">Tạo video</button>
-  <button data-tab="character">Nhân vật</button>
-  <button data-tab="results">Kết quả</button>
-  <button data-tab="concat">Ghép clip</button>
+  <div class="nav-inner">
+    <button data-tab="overview" class="active">Tổng quan</button>
+    <button data-tab="create">Tạo video</button>
+    <button data-tab="character">Nhân vật</button>
+    <button data-tab="results">Kết quả</button>
+    <button data-tab="concat">Ghép clip</button>
+  </div>
 </nav>
 <main>
   <section id="tab-overview" class="tab active">
+    <p class="eyebrow">Studio</p>
     <h2>Tổng quan</h2>
+    <p class="section-lead">Nhìn nhanh toàn bộ studio: bao nhiêu prompt, job, ảnh và video đã sẵn sàng.</p>
     <div id="overview" class="cards"></div>
-    <h3>Quy tắc bắt buộc</h3>
-    <ul>
-      <li>Giữ nguyên tuyệt đối sản phẩm: màu, kiểu dáng, cổ áo, logo, họa tiết.</li>
-      <li>Một nhân vật duy nhất xuyên suốt một video.</li>
-      <li>Dọc 9:16. Không chữ, không phụ đề, không lời dẫn trừ khi bạn dặn.</li>
-      <li>Không tự thêm giá, công dụng hay khuyến mãi bạn không cung cấp.</li>
-    </ul>
+    <div class="rules">
+      <h3>Quy tắc bắt buộc</h3>
+      <ul>
+        <li>Giữ nguyên tuyệt đối sản phẩm: màu, kiểu dáng, cổ áo, logo, họa tiết.</li>
+        <li>Một nhân vật duy nhất xuyên suốt một video.</li>
+        <li>Dọc 9:16. Không chữ, không phụ đề, không lời dẫn trừ khi bạn dặn.</li>
+        <li>Không tự thêm giá, công dụng hay khuyến mãi bạn không cung cấp.</li>
+      </ul>
+    </div>
   </section>
 
   <section id="tab-create" class="tab">
+    <p class="eyebrow">Workflow</p>
     <h2>Tạo video</h2>
+    <p class="section-lead">Ba bước: chọn ảnh, điền thông tin, tạo job rồi copy prompt sang chat. Bấm vào ảnh để chọn cho job.</p>
     <div class="grid">
-      <div>
+      <div class="panel">
         <h3>1. Ảnh sản phẩm</h3>
         <div class="drop" id="drop-product">Kéo thả ảnh vào đây, hoặc <input type="file" id="file-product" accept="image/*"></div>
         <div id="products" class="thumbs"></div>
       </div>
-      <div>
+      <div class="panel">
         <h3>2. Ảnh nhân vật (nếu có)</h3>
         <div class="drop" id="drop-character">Kéo thả ảnh vào đây, hoặc <input type="file" id="file-character" accept="image/*"></div>
         <div id="characters" class="thumbs"></div>
@@ -60,19 +74,23 @@
   </section>
 
   <section id="tab-character" class="tab">
+    <p class="eyebrow">Thư viện</p>
     <h2>Nhân vật chuẩn của kênh</h2>
-    <p>Ảnh ở đây dùng cho mọi video sau của kênh, kèm ảnh sản phẩm của từng video. Nếu chưa có, tạo cảnh đầu rồi trích khung hình rõ mặt làm ảnh chuẩn.</p>
+    <p class="section-lead">Ảnh ở đây dùng cho mọi video sau của kênh, kèm ảnh sản phẩm của từng video. Nếu chưa có, tạo cảnh đầu rồi trích khung hình rõ mặt làm ảnh chuẩn.</p>
     <div id="character-list" class="thumbs"></div>
   </section>
 
   <section id="tab-results" class="tab">
+    <p class="eyebrow">Thư viện</p>
     <h2>Kết quả</h2>
+    <p class="section-lead">Video đã ghép xong trong thư mục output. Bấm xem trước hoặc tải về để đăng.</p>
     <div id="outputs"></div>
   </section>
 
   <section id="tab-concat" class="tab">
+    <p class="eyebrow">Hậu kỳ</p>
     <h2>Ghép clip thành video</h2>
-    <p>Bấm vào các clip theo đúng thứ tự muốn ghép, rồi chọn kiểu ghép.</p>
+    <p class="section-lead">Bấm vào các clip theo đúng thứ tự muốn ghép, rồi chọn kiểu ghép.</p>
     <label>Kiểu ghép
       <select id="concat-mode">
         <option value="concat">Ghép nguyên 3 x 10s thành 30s</option>
@@ -85,6 +103,7 @@
     <div id="concat-clips" class="list"></div>
   </section>
 </main>
+<footer>Fashion Affiliate Studio — chạy local trên máy của bạn, không đăng nhập, không gửi cookie hay key.</footer>
 <script src="/app.js"></script>
 </body>
 </html>
