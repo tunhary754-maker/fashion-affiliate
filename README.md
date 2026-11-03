@@ -3,9 +3,11 @@
 Tool này dùng để làm video giới thiệu sản phẩm từ ảnh sản phẩm do bạn gửi,
 dạng dọc 9:16, đăng TikTok và Facebook Reels kèm link affiliate.
 
-Không dùng login bằng cookie, không gọi API nội bộ của bất kỳ nền tảng nào.
-Video được tạo trong chat với Muse (ảnh nhân vật trước, ảnh sản phẩm sau,
-rồi đến văn bản prompt), sau đó ghép bằng ffmpeg trong repo này.
+Luồng tạo video mặc định không dùng login bằng cookie, không gọi API nội
+bộ của bất kỳ nền tảng nào. Video được tạo trong chat với Muse (ảnh nhân
+vật trước, ảnh sản phẩm sau, rồi đến văn bản prompt), sau đó ghép bằng
+ffmpeg trong repo này. Module login bằng cookie là phần tùy chọn riêng
+trong `login/` (xem mục dưới), không làm thay đổi luồng mặc định này.
 
 Skill đầy đủ nằm ở `~/workspace/custom-skills/fashion-affiliate/SKILL.md`.
 Mô hình theo repo công khai `charlotteh618/tao-video-thoi-trang-ai`
@@ -61,6 +63,29 @@ Các tab trong giao diện:
 Lưu ý: giao diện này quản lý job, prompt và kết quả. Nó không tự tạo video
 bằng API ngoài, và không dùng cookie đăng nhập của bất kỳ nền tảng nào.
 Video vẫn được tạo trong chat với Muse, rồi ghép ở đây.
+
+## Login bằng cookie (module tùy chọn, thư mục `login/`)
+
+Nếu bạn cần đăng nhập Muse bằng cookie cho tool khác / tầng gateway, dùng
+module tách riêng trong `login/`, chỉ phụ thuộc gói `requests`, không
+import gì từ repo automuse-multi:
+
+```
+pip install requests
+python login/example.py --cookies-file ./cookies.txt
+python login/test_cookie_login.py   # chỉ dùng dữ liệu giả, không chạm cookie thật
+```
+
+Module này gồm: parse cookie 3 dạng (header, cookies.txt Netscape, JSON)
++ proxy riêng từng acc, `build_session` + `check_login` (GET trang chủ
+rồi `/api/me`; không dùng `/api/auth/session` làm phép thử vì nó trả 401
+ngay cả khi cookie còn sống), và `parse/fetch_gateway_init` (chỉ
+`gatewayUrl` + `vmName` bắt buộc, thiếu `authToken` vẫn parse được).
+
+Nó KHÔNG gồm: Noise handshake, `chat.stream`/`subscribe`, sinh video,
+round-robin/cooldown/đếm job, làm mới authToken. Nói cách khác, login
+được không có nghĩa là sinh được video — đó là tầng khác. Chi tiết đầy
+đủ trong `login/README.md`.
 
 ## Cách dùng
 
@@ -127,6 +152,9 @@ bối cảnh, nhân vật và cách trình bày. Xem chi tiết trong `SKILL.md`
 
 - `prompts/` — mẫu prompt cho từng dạng video.
 - `scripts/` — script ghép video bằng ffmpeg.
+- `login/` — module login bằng cookie tùy chọn (code only, không chứa
+  cookie thật): `cookie_login.py`, `example.py`, `test_cookie_login.py`,
+  `README.md`.
 - `input/` — ảnh sản phẩm bạn đưa vào, không commit ảnh thật lên repo
   công khai nếu không muốn lộ sản phẩm.
 - `character-reference/` — ảnh nhân vật chuẩn của kênh.
@@ -138,5 +166,9 @@ bối cảnh, nhân vật và cách trình bày. Xem chi tiết trong `SKILL.md`
 - Ảnh và video trong `input/`, `output/` và `character-reference/` đã được
   đưa vào `.gitignore`, trừ file `.gitkeep`.
 - Đừng đưa cookie, mật khẩu, API key hay thông tin đăng nhập vào repo này.
-- Skill này khác tool gateway trước đó (`automuse/fashion.py`): skill này
-  không đăng nhập cookie, clip tạo trong chat rồi ghép tay bằng script.
+  Module `login/` chỉ chứa code, không chứa cookie thật; file accounts
+  (nếu bạn tự tạo lúc chạy) ghi quyền 0600 và đã nằm trong `.gitignore`.
+- Skill này khác tool gateway trước đó (`automuse/fashion.py`): luồng tạo
+  clip mặc định của skill này vẫn là tạo trong chat rồi ghép tay bằng
+  script, không đăng nhập cookie; `login/` chỉ là module tùy chọn riêng
+  cho tầng login, không thay đổi luồng đó.

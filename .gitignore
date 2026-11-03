@@ -6,3 +6,9 @@ output/*
 !output/.gitkeep
 jobs/*
 !jobs/.gitkeep
+# login module: never commit real cookies/accounts
+login/accounts*.json
+login/cookies.txt
+login/cookies.json
+__pycache__/
+*.pyc
