@@ -10,5 +10,9 @@ jobs/*
 login/accounts*.json
 login/cookies.txt
 login/cookies.json
+# gateway mode: never commit real accounts/settings/cache
+gateway_config/
+cache/
+.env
 __pycache__/
 *.pyc

@@ -87,6 +87,30 @@ round-robin/cooldown/đếm job, làm mới authToken. Nói cách khác, login
 được không có nghĩa là sinh được video — đó là tầng khác. Chi tiết đầy
 đủ trong `login/README.md`.
 
+## Mode gateway multi-acc (tùy chọn, riêng với luồng mặc định)
+
+Ngoài luồng chat-native trên, repo có thêm mode gateway port từ
+automuse-multi, dùng khi bạn muốn sinh clip thẳng bằng cookie nhiều acc
+thay vì tạo clip trong chat. Hai mode không trộn trong cùng 1 job.
+
+```
+pip install requests pyyaml noiseprotocol websocket-client
+python gateway_cli.py accounts add --name acc2 --cookie-file ./cookies-acc2.txt
+python gateway_cli.py fashion --product "Bộ trẻ em hoạt hình" \
+  --product-image input/bo-quan-ao-tre-em-hoat-hinh.jpg \
+  --model-image character-reference/be-trai-cafe-ngau.jpg
+python gateway_cli.py build --script gateway_scripts/fashion-bo-tre-em-hoat-hinh.yaml --mock
+python gateway_cli.py build --script gateway_scripts/fashion-bo-tre-em-hoat-hinh.yaml --accounts acc2
+```
+
+Code ở `gateway/` + CLI `gateway_cli.py`, chi tiết đầy đủ (multi-acc
+round-robin/cooldown/failover, giới hạn gateway, file nhạy cảm) trong
+`gateway/README.md`. Tóm tắt giới hạn: gateway đi qua phiên chat chính
+của acc nên request hiện trong lịch sử chat; chỉ chạy thật khi đã xác
+nhận rõ đợt chạy từ thiết bị thật của chủ acc; hiện tại chỉ acc2 sinh
+live được, acc1 gateway hỏng dù check login vẫn OK; mỗi cảnh chỉ nhận
+1 ảnh tham chiếu; luôn chạy `--mock` trước khi chạy thật.
+
 ## Cách dùng
 
 1. Bỏ ảnh sản phẩm vào `input/` (ví dụ `input/product.png`).
@@ -155,6 +179,9 @@ bối cảnh, nhân vật và cách trình bày. Xem chi tiết trong `SKILL.md`
 - `login/` — module login bằng cookie tùy chọn (code only, không chứa
   cookie thật): `cookie_login.py`, `example.py`, `test_cookie_login.py`,
   `README.md`.
+- `gateway/` + `gateway_cli.py` — mode gateway multi-acc port từ
+  automuse-multi (accounts, gateway Noise, pipeline, fashion script);
+  `gateway_scripts/` là nơi chứa kịch bản fashion do mode này tạo ra.
 - `input/` — ảnh sản phẩm bạn đưa vào, không commit ảnh thật lên repo
   công khai nếu không muốn lộ sản phẩm.
 - `character-reference/` — ảnh nhân vật chuẩn của kênh.

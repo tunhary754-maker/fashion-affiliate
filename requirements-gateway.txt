@@ -1,0 +1,9 @@
+# Chỉ cho mode gateway multi-acc (gateway_cli.py). Luồng chat-native
+# mặc định + Web Studio không cần các gói này (chỉ cần Python stdlib + ffmpeg).
+requests>=2.31
+pyyaml>=6.0
+# Gateway transport thật (Noise WebSocket tới muse.ai):
+noiseprotocol>=0.3
+websocket-client>=1.8
+# Tùy chọn: để dùng proxy socks5 (vd: socks5://user:pass@host:port)
+# pysocks>=1.7
