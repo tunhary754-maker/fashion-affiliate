@@ -1,0 +1,8 @@
+input/*
+!input/.gitkeep
+character-reference/*
+!character-reference/.gitkeep
+output/*
+!output/.gitkeep
+jobs/*
+!jobs/.gitkeep

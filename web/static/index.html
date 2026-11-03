@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fashion Affiliate Studio</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header>
+  <h1>👗 Fashion Affiliate Studio</h1>
+  <p>Video sản phẩm affiliate cho TikTok và Facebook Reels — dọc 9:16, giữ nguyên sản phẩm, không chữ, không phụ đề, không lời dẫn trừ khi bạn dặn.</p>
+  <p class="note">Giao diện này chỉ quản lý job, prompt và kết quả. Video vẫn tạo trong chat với Muse (ảnh nhân vật trước, ảnh sản phẩm sau, rồi prompt), rồi ghép ở đây. Không đăng nhập, không gửi cookie hay key.</p>
+</header>
+<nav id="tabs">
+  <button data-tab="overview" class="active">Tổng quan</button>
+  <button data-tab="create">Tạo video</button>
+  <button data-tab="character">Nhân vật</button>
+  <button data-tab="results">Kết quả</button>
+  <button data-tab="concat">Ghép clip</button>
+</nav>
+<main>
+  <section id="tab-overview" class="tab active">
+    <h2>Tổng quan</h2>
+    <div id="overview" class="cards"></div>
+    <h3>Quy tắc bắt buộc</h3>
+    <ul>
+      <li>Giữ nguyên tuyệt đối sản phẩm: màu, kiểu dáng, cổ áo, logo, họa tiết.</li>
+      <li>Một nhân vật duy nhất xuyên suốt một video.</li>
+      <li>Dọc 9:16. Không chữ, không phụ đề, không lời dẫn trừ khi bạn dặn.</li>
+      <li>Không tự thêm giá, công dụng hay khuyến mãi bạn không cung cấp.</li>
+    </ul>
+  </section>
+
+  <section id="tab-create" class="tab">
+    <h2>Tạo video</h2>
+    <div class="grid">
+      <div>
+        <h3>1. Ảnh sản phẩm</h3>
+        <div class="drop" id="drop-product">Kéo thả ảnh vào đây, hoặc <input type="file" id="file-product" accept="image/*"></div>
+        <div id="products" class="thumbs"></div>
+      </div>
+      <div>
+        <h3>2. Ảnh nhân vật (nếu có)</h3>
+        <div class="drop" id="drop-character">Kéo thả ảnh vào đây, hoặc <input type="file" id="file-character" accept="image/*"></div>
+        <div id="characters" class="thumbs"></div>
+      </div>
+    </div>
+    <h3>3. Thông tin job</h3>
+    <label>Tên sản phẩm <input id="job-product" placeholder="VD: Bộ quần áo trẻ em họa tiết hoạt hình"></label>
+    <label>Chi tiết sản phẩm <input id="job-details" placeholder="VD: áo cộc tay cài cúc, quần short, họa tiết đỏ xanh vàng đen"></label>
+    <label>Chọn prompt
+      <select id="job-prompt"></select>
+    </label>
+    <label>Ghi chú <input id="job-notes" placeholder="Tùy chọn: CTA, bối cảnh muốn dùng..."></label>
+    <button id="btn-create-job">Tạo job</button>
+    <div id="job-result"></div>
+    <h3>Job đã tạo</h3>
+    <div id="jobs"></div>
+  </section>
+
+  <section id="tab-character" class="tab">
+    <h2>Nhân vật chuẩn của kênh</h2>
+    <p>Ảnh ở đây dùng cho mọi video sau của kênh, kèm ảnh sản phẩm của từng video. Nếu chưa có, tạo cảnh đầu rồi trích khung hình rõ mặt làm ảnh chuẩn.</p>
+    <div id="character-list" class="thumbs"></div>
+  </section>
+
+  <section id="tab-results" class="tab">
+    <h2>Kết quả</h2>
+    <div id="outputs"></div>
+  </section>
+
+  <section id="tab-concat" class="tab">
+    <h2>Ghép clip thành video</h2>
+    <p>Bấm vào các clip theo đúng thứ tự muốn ghép, rồi chọn kiểu ghép.</p>
+    <label>Kiểu ghép
+      <select id="concat-mode">
+        <option value="concat">Ghép nguyên 3 x 10s thành 30s</option>
+        <option value="montage">Montage: cắt mỗi clip 4s từ giây thứ 1</option>
+      </select>
+    </label>
+    <label>Tên file kết quả <input id="concat-output" value="video-ghep.mp4"></label>
+    <button id="btn-concat">Ghép video</button>
+    <div id="concat-result"></div>
+    <div id="concat-clips" class="list"></div>
+  </section>
+</main>
+<script src="/app.js"></script>
+</body>
+</html>
