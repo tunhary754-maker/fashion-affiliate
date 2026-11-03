@@ -1,4 +1,4 @@
-let state = { products: [], characters: [], prompts: [], jobs: [], outputs: [] };
+let state = { products: [], characters: [], prompts: [], jobs: [], outputs: [], accounts: [] };
 let sel = { product: "", character: "" };
 let concatSel = [];
 
@@ -25,7 +25,14 @@ async function loadAll() {
   el("overview").innerHTML = [
     ["Prompt mẫu", ov.prompts], ["Job", ov.jobs], ["Job đã xong", ov.jobs_done],
     ["Video kết quả", ov.outputs], ["Ảnh sản phẩm", ov.products], ["Ảnh nhân vật", ov.characters],
+    ["Tài khoản gateway", ov.accounts || 0],
   ].map(([k, v]) => `<div class="card"><b>${v}</b>${k}</div>`).join("");
+  state.accounts = await api("/api/accounts");
+  el("accounts").innerHTML = state.accounts.length ? state.accounts.map(a => `
+    <div class="job"><b>${esc(a.name)}</b> — ${esc(a.status)} — ${a.jobs} job
+    <br>Proxy: ${esc(a.proxy || "(không có)")}
+    <br><button onclick="checkAccount('${esc(a.name)}')">Kiểm tra</button>
+    <button class="secondary" onclick="delAccount('${esc(a.name)}')">Xoá</button></div>`).join("") : "<p>Chưa có tài khoản gateway nào.</p>";
   state.prompts = await api("/api/prompts");
   state.products = await api("/api/products");
   state.characters = await api("/api/character");
@@ -72,6 +79,37 @@ window.copyPrompt = async (id) => {
   alert("Đã copy prompt. Trong chat với Muse, gửi ảnh nhân vật trước, ảnh sản phẩm sau, rồi dán prompt này.");
 };
 window.markDone = async (id) => { await api(`/api/jobs/${id}/done`, { method: "POST" }); loadAll(); };
+window.checkAccount = async (name) => {
+  el("account-result").innerHTML = "<p>⏳ Đang kiểm tra...</p>";
+  try {
+    const r = await api(`/api/accounts/${encodeURIComponent(name)}/check`, { method: "POST" });
+    el("account-result").innerHTML = `<div class="job"><b>${esc(r.name)}</b><br>
+      Muse login: ${r.login_ok ? "✅ OK" : "❌ Lỗi"} — ${esc(r.login_msg)}<br>
+      Token/quota: ${r.quota_ok === true ? "✅ OK" : (r.quota_ok === false ? "❌ Lỗi" : "Không rõ")} — ${esc(r.quota_msg)}<br>
+      Tuần ${esc(r.week)}: ${esc(r.videos)} video, ${esc(r.minutes)} phút</div>
+      <p class="note">Login OK chỉ chứng minh session web còn sống, chưa chứng minh gateway sinh video được.</p>`;
+  } catch (e) { el("account-result").innerHTML = `<p>❌ ${esc(e.message)}</p>`; }
+};
+window.delAccount = async (name) => {
+  if (!confirm(`Xoá tài khoản ${name}? Không khôi phục được, muốn dùng lại phải thêm cookie mới.`)) return;
+  await api(`/api/accounts/${encodeURIComponent(name)}`, { method: "DELETE" });
+  await loadAll();
+};
+el("btn-add-account").onclick = async () => {
+  try {
+    const acc = await api("/api/accounts", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: el("acc-name").value,
+        proxy: el("acc-proxy").value,
+        cookie: el("acc-cookie").value,
+      }),
+    });
+    el("account-add-result").innerHTML = `<p>✅ Đã thêm tài khoản <b>${esc(acc.name)}</b>. Bấm Kiểm tra để xác nhận login trước khi dùng.</p>`;
+    el("acc-name").value = ""; el("acc-proxy").value = ""; el("acc-cookie").value = "";
+    await loadAll();
+  } catch (e) { el("account-add-result").innerHTML = `<p>❌ ${esc(e.message)}</p>`; }
+};
 window.delImg = async (kind, name) => {
   if (!confirm("Xoá ảnh này?")) return;
   const path = kind === "product" ? "products" : "characters";

@@ -59,10 +59,15 @@ Các tab trong giao diện:
 - **Ghép clip** — bấm chọn các clip trong `output/` theo đúng thứ tự,
   chọn ghép nguyên hoặc montage, bấm ghép là có video cuối trong
   `output/`.
+- **Tài khoản** — chỉ cho mode gateway: thêm tài khoản Muse bằng cookie
+  (tên, proxy tùy chọn, chuỗi cookie), xem danh sách, kiểm tra đăng nhập
+  và xoá tài khoản. Cookie chỉ lưu local ở `gateway_config/accounts.json`
+  (quyền 0600, không đẩy lên GitHub), API không bao giờ trả cookie ra
+  ngoài. Luồng chat-native mặc định không cần tài khoản.
 
-Lưu ý: giao diện này quản lý job, prompt và kết quả. Nó không tự tạo video
-bằng API ngoài, và không dùng cookie đăng nhập của bất kỳ nền tảng nào.
-Video vẫn được tạo trong chat với Muse, rồi ghép ở đây.
+Lưu ý: giao diện này quản lý job, prompt, kết quả và tài khoản gateway.
+Nó không tự tạo video bằng API ngoài. Video vẫn được tạo trong chat với
+Muse, rồi ghép ở đây.
 
 ## Login bằng cookie (module tùy chọn, thư mục `login/`)
 

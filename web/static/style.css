@@ -220,7 +220,7 @@ h3 {
 }
 .panel h3 { margin-top: 0; }
 label { display: block; margin: 12px 0; font-weight: 600; font-size: 14px; }
-label input, label select {
+label input, label select, label textarea {
   width: 100%;
   padding: 11px 12px;
   margin-top: 6px;
@@ -233,7 +233,7 @@ label input, label select {
   color: var(--ink);
 }
 label input::placeholder { color: var(--faint); }
-label input:focus, label select:focus {
+label input:focus, label select:focus, label textarea:focus {
   outline: none;
   border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(159, 18, 57, .14);

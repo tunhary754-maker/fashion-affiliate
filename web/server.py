@@ -8,7 +8,13 @@ ghép clip.
 
 Video vẫn được tạo trong chat với Muse, rồi lưu vào output/ (hoặc đã
 nằm sẵn ở đó khi tạo bằng chat này). Giao diện không tự tạo video bằng
-API ngoài, và không dùng cookie đăng nhập của bất kỳ nền tảng nào.
+API ngoài.
+
+Tab Tài khoản chỉ phục vụ mode gateway (gateway_cli.py): thêm/kiểm tra/
+xoá acc Muse bằng cookie. Cookie chỉ lưu local ở gateway_config/
+accounts.json (quyền 0600, đã nằm trong .gitignore, không đẩy lên
+GitHub), chỉ dùng để kiểm tra đăng nhập với Muse, và API không bao giờ
+trả cookie ra ngoài. Luồng chat-native mặc định không cần đăng nhập.
 
 Chạy:
     python3 web/server.py
@@ -31,6 +37,43 @@ ROOT = Path(__file__).resolve().parent.parent
 STATIC = Path(__file__).resolve().parent / "static"
 JOBS_FILE = ROOT / "jobs" / "jobs.json"
 SCRIPTS = ROOT / "scripts"
+sys.path.insert(0, str(ROOT))  # để import được gateway.accounts (mode gateway)
+
+
+def _gateway():
+    """Import lười gateway để tab cũ không hỏng nếu thiếu dependency."""
+    from gateway.accounts import Account, AccountManager, load_cookies
+
+    return Account, AccountManager, load_cookies
+
+
+def _safe_account_name(name):
+    raw = str(name or "").strip()
+    if not raw or len(raw) > 64:
+        return ""
+    if not all(c.isalnum() or c in ("-", "_") for c in raw):
+        return ""
+    return raw
+
+
+def _account_public(acc):
+    status = "tắt" if not acc.enabled else (
+        "cooldown" if acc.is_on_cooldown() else "sẵn sàng"
+    )
+    return {
+        "name": acc.name,
+        "proxy": acc.proxy_config().masked(),
+        "jobs": acc.jobs_done,
+        "status": status,
+    }
+
+
+def _list_accounts():
+    try:
+        _, AccountManager, _ = _gateway()
+        return [_account_public(a) for a in AccountManager().accounts]
+    except Exception:
+        return []
 
 IMAGE_SUFFIXES = {".png", ".jpg", ".jpeg", ".webp"}
 IMAGE_TYPES = {
@@ -145,6 +188,7 @@ class Handler(SimpleHTTPRequestHandler):
                 "outputs": len(_list_files("output", {".mp4"})),
                 "products": len(_list_files("input", IMAGE_SUFFIXES)),
                 "characters": len(_list_files("character-reference", IMAGE_SUFFIXES)),
+                "accounts": len(_list_accounts()),
             })
         if path == "/api/prompts":
             items = []
@@ -164,6 +208,8 @@ class Handler(SimpleHTTPRequestHandler):
             return self._send_json(_list_files("character-reference", IMAGE_SUFFIXES))
         if path == "/api/products":
             return self._send_json(_list_files("input", IMAGE_SUFFIXES))
+        if path == "/api/accounts":
+            return self._send_json(_list_accounts())
         if path.startswith("/input/"):
             name = _safe_name(unquote(path[len("/input/"):]))
             target = ROOT / "input" / name if name else None
@@ -260,6 +306,68 @@ class Handler(SimpleHTTPRequestHandler):
                     return self._send_json(job)
             return self._send_json({"error": "not found"}, status=404)
 
+        if path == "/api/accounts":
+            name = _safe_account_name(body.get("name"))
+            cookie = str(body.get("cookie") or "").strip()
+            proxy = str(body.get("proxy") or "").strip()
+            if not name or not cookie:
+                return self._send_json(
+                    {"error": "Thiếu tên tài khoản hoặc cookie"}, status=400
+                )
+            try:
+                Account, AccountManager, load_cookies = _gateway()
+                if not load_cookies(cookie):
+                    return self._send_json(
+                        {"error": "Cookie rỗng/không parse được"}, status=400
+                    )
+                mgr = AccountManager()
+                acc = Account(name=name, cookie=cookie, proxy=proxy)
+                mgr.add(acc)
+            except ValueError as e:
+                return self._send_json({"error": str(e)}, status=400)
+            except Exception as e:
+                return self._send_json({"error": f"Không thêm được: {e}"}, status=500)
+            return self._send_json(_account_public(acc), status=201)
+
+        if path.startswith("/api/accounts/") and path.endswith("/check"):
+            name = _safe_account_name(unquote(path[len("/api/accounts/"):-len("/check")].strip("/")))
+            if not name:
+                return self._send_json({"error": "not found"}, status=404)
+            try:
+                # Dùng module login/ (chỉ cần requests) thay vì muse_client
+                # (cần websocket/noise) để nút Kiểm tra chạy được ngay cả
+                # khi python chạy web chưa cài đủ dependency gateway.
+                _, AccountManager, _ = _gateway()
+                from gateway.config import load_settings
+                from gateway.usage import UsageTracker
+                from login.cookie_login import (
+                    CookieAccount,
+                    build_session,
+                    check_login,
+                )
+
+                acc = AccountManager().get(name)
+                if not acc:
+                    return self._send_json({"error": "not found"}, status=404)
+                simple = CookieAccount(
+                    name=acc.name, cookie=acc.cookie,
+                    cookie_file=acc.cookie_file, proxy=acc.proxy,
+                )
+                login_ok, login_msg = check_login(build_session(simple))
+                usage = UsageTracker().remaining(acc, load_settings())
+                return self._send_json({
+                    "name": name,
+                    "login_ok": login_ok,
+                    "login_msg": login_msg,
+                    "quota_ok": None,
+                    "quota_msg": "Không đọc được token/quota qua API (API không công khai) — dùng giới hạn tuần cục bộ thay thế",
+                    "week": usage["week"],
+                    "videos": f"{usage['videos']}/{usage['max_videos'] if usage['max_videos'] else '∞'}",
+                    "minutes": f"{usage['minutes']}/{usage['max_minutes'] if usage['max_minutes'] else '∞'}",
+                })
+            except Exception as e:
+                return self._send_json({"error": f"Kiểm tra lỗi: {e}"}, status=500)
+
         if path == "/api/concat":
             clips = body.get("clips") or []
             mode = str(body.get("mode") or "concat")
@@ -298,6 +406,16 @@ class Handler(SimpleHTTPRequestHandler):
 
     def do_DELETE(self):
         parts = [p for p in urlparse(self.path).path.split("/") if p]
+        if len(parts) == 3 and parts[0] == "api" and parts[1] == "accounts":
+            name = _safe_account_name(unquote(parts[2]))
+            if name:
+                try:
+                    _, AccountManager, _ = _gateway()
+                    if AccountManager().remove(name):
+                        return self._send_json({"deleted": name})
+                except Exception:
+                    pass
+            return self._send_json({"error": "not found"}, status=404)
         if len(parts) == 3 and parts[0] == "api" and parts[1] in ("products", "characters"):
             folder = "input" if parts[1] == "products" else "character-reference"
             name = _safe_name(unquote(parts[2]))

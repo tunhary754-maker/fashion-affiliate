@@ -13,7 +13,7 @@
     <div class="brand-text">
       <h1>Fashion Affiliate Studio</h1>
       <p class="tagline">Video sản phẩm affiliate cho TikTok và Facebook Reels — dọc 9:16, giữ nguyên sản phẩm, không chữ, không phụ đề, không lời dẫn trừ khi bạn dặn.</p>
-      <p class="note">Giao diện này chỉ quản lý job, prompt và kết quả. Video vẫn tạo trong chat với Muse (ảnh nhân vật trước, ảnh sản phẩm sau, rồi prompt), rồi ghép ở đây. Không đăng nhập, không gửi cookie hay key.</p>
+      <p class="note">Giao diện này quản lý job, prompt, kết quả và tài khoản gateway. Video vẫn tạo trong chat với Muse (ảnh nhân vật trước, ảnh sản phẩm sau, rồi prompt), rồi ghép ở đây. Cookie tài khoản chỉ lưu local trên máy này, không đẩy lên GitHub.</p>
     </div>
     <span class="badge">Chạy local · Offline</span>
   </div>
@@ -25,6 +25,7 @@
     <button data-tab="character">Nhân vật</button>
     <button data-tab="results">Kết quả</button>
     <button data-tab="concat">Ghép clip</button>
+    <button data-tab="accounts">Tài khoản</button>
   </div>
 </nav>
 <main>
@@ -87,6 +88,23 @@
     <div id="outputs"></div>
   </section>
 
+  <section id="tab-accounts" class="tab">
+    <p class="eyebrow">Gateway</p>
+    <h2>Tài khoản Muse (mode gateway)</h2>
+    <p class="section-lead">Chỉ dùng khi sinh video qua gateway bằng gateway_cli.py. Luồng chat-native mặc định không cần tài khoản. Cookie chỉ lưu local ở gateway_config/accounts.json (quyền 0600, không đẩy lên GitHub) và không bao giờ hiện lại sau khi thêm.</p>
+    <div class="panel">
+      <h3>Thêm tài khoản</h3>
+      <label>Tên tài khoản <input id="acc-name" placeholder="VD: acc1"></label>
+      <label>Proxy (tùy chọn) <input id="acc-proxy" placeholder="VD: http://user:pass@host:port"></label>
+      <label>Cookie <textarea id="acc-cookie" rows="4" placeholder="Dán chuỗi cookie header (a=1; b=2...)"></textarea></label>
+      <button id="btn-add-account">Thêm tài khoản</button>
+      <div id="account-add-result"></div>
+    </div>
+    <h3>Tài khoản đã có</h3>
+    <div id="accounts"></div>
+    <div id="account-result"></div>
+  </section>
+
   <section id="tab-concat" class="tab">
     <p class="eyebrow">Hậu kỳ</p>
     <h2>Ghép clip thành video</h2>
@@ -103,7 +121,7 @@
     <div id="concat-clips" class="list"></div>
   </section>
 </main>
-<footer>Fashion Affiliate Studio — chạy local trên máy của bạn, không đăng nhập, không gửi cookie hay key.</footer>
+<footer>Fashion Affiliate Studio — chạy local trên máy của bạn. Cookie tài khoản gateway chỉ lưu local, không đẩy lên GitHub.</footer>
 <script src="/app.js"></script>
 </body>
 </html>
