@@ -1,12 +1,13 @@
 # Tổng hợp tất cả kiểu làm video theo trang phục bán
 
-Ngày tổng hợp: 2026-11-20.
+Ngày tổng hợp: 2026-11-20. Cập nhật: 2026-11-21 (đợt 3: +155 reel,
+4 kênh mới, template 20–24, kiểu 21–25).
 
-Nguồn: skill thời trang nữ `fashion-affiliate-women` (332 reel đã
-xem, 10 kênh + 3 reel lẻ, 19 template, 20 kiểu chọn) + skill thời
+Nguồn: skill thời trang nữ `fashion-affiliate-women` (487 reel đã
+xem, 14 kênh + 3 reel lẻ, 24 template, 25 kiểu chọn) + skill thời
 trang trẻ em `fashion-affiliate` (7 template, theo repo
-charlotteh618/tao-video-thoi-trang-ai). Số kiểu 1–20 là số trong
-bảng chọn `phong-cach-lua-chon.md`; template 01–19 là file trong
+charlotteh618/tao-video-thoi-trang-ai). Số kiểu 1–25 là số trong
+bảng chọn `phong-cach-lua-chon.md`; template 01–24 là file trong
 `prompts/` của skill thời trang nữ, template 01–07 của skill trẻ
 em nằm trong `~/workspace/fashion-affiliate/prompts/`.
 
@@ -19,14 +20,15 @@ cho cùng 1 món (xem mục "1 món đồ → 3–4 reel" ở cuối).
 
 | Trang phục | Kiểu tốt nhất | Template | Lưu ý chính |
 |---|---|---|---|
-| Quần jean | 1, 20, 11 | 03, 14 | Góc RỘNG toàn thân; chi tiết túi trước → chỉ nghiêng 3/4 mặt trước |
+| Quần jean | 1, 20, 11, 23 | 03, 14, 22 | Góc RỘNG toàn thân; chi tiết túi trước → chỉ nghiêng 3/4 mặt trước; haul đánh số "Quần 1/Quần 2" (242K) |
 | Quần ống rộng (nỉ, jean, vải) | 1, 2, 20 | 03, 02, 14 | Đi bộ toàn thân khoe độ dài phủ giày |
 | Quần short | 1, 18, 5 | 03, 19, 07 | |
-| Quần tất | 9, 15, 8 | 12, 16, 11 | Demo trên người; mặt hàng top lượt xem ở 2 kênh |
-| Áo thun | 18, 1, 19 | 19, 03, 15 | Nhảy nhẹ hợp đồ trẻ trung |
+| Quần tất | 22, 9, 15, 8 | 21, 12, 16, 11 | Thử theo biến thể qua nhiều outfit; mặt hàng top lượt xem ở 3 kênh |
+| Áo thun | 18, 1, 24, 19 | 19, 03, 23, 15 | Nhảy nhẹ hợp đồ trẻ trung; chuỗi sưu tập "Tủ đồ 100 chiếc áo tay dài" |
 | Áo len / cardigan | 11, 19, 5 | 14, 15, 07 | Tips cardigan 3,3 triệu lượt xem |
 | Áo giữ nhiệt lót lông | 15, 8 | 16, 11 | Kéo vạt khoe lót lông |
 | Áo peplum / áo ren / áo kiểu | 5, 6, 15 | 07, 08, 16 | |
+| Áo hở lưng | 5, 21 | 07, 20 | Góc quay lưng là góc bán chính (6,8K like) |
 | Áo sơ mi | 16, 5 | 17, 07 | Đồ công sở |
 | Váy lụa / váy satin | 1, 3, 5 | 03, 09, 07 | Đi bộ phố, trước cửa hàng hiệu |
 | Váy ren / váy dài | 5, 1, 7 | 07, 03, 10 | |
@@ -34,16 +36,16 @@ cho cùng 1 món (xem mục "1 món đồ → 3–4 reel" ở cuối).
 | Váy mini | 18, 1, 5 | 19, 03, 07 | |
 | Chân váy dài | 16, 19, 11 | 17, 15, 14 | Mei 1,2 triệu; Khánh Chi 197K |
 | Chân váy mini xếp ly | 16, 18 | 17, 19 | |
-| Set đồ / set bộ | 1, 12, 7 | 03, 15, 10 | |
+| Set đồ / set bộ | 1, 21, 12, 7 | 03, 20, 15, 10 | Đi bộ + giơ đồ khoe cả set |
 | Set nỉ / hoodie | 1, 20 | 03, 14 | |
-| Đồ ngủ / pyjama | 11, 12 | 14, 15 | KHÔNG try-on thuần (lượt xem thấp) |
+| Đồ ngủ / pyjama | 11, 12 | 14, 15 | KHÔNG try-on thuần; phối thành outfit có chủ đích (Hoàng Liên Hoa 83K) |
 | Phụ kiện chức năng | 9, 10, 15 | 12, 13, 16 | Top lượt xem ở 2 kênh |
 | Boots / giày | 15, 9, 1 | 16, 12, 03 | Giơ chân khoe boots, xỏ giày |
 | Blazer / áo khoác | 16, 5, 1 | 17, 07, 03 | |
 | Đồ thể thao | 3, 18 | 04, 19 | Pickleball, selfie gương gym |
-| Áo dài | 5, 17, 1 | 07, 18, 03 | Chuỗi Tết |
+| Áo dài | 5, 25, 17, 1 | 07, 24, 18, 03 | Chuỗi Tết; "Team áo dài hay bà ba" 133K |
 | Đồ công sở | 16, 2, 5 | 17, 02, 07 | Ngách chính của Mei |
-| Đồ Tết | 17, 20, 7 | 18, 14, 10 | Đếm ngược, đăng sớm hàng tháng |
+| Đồ Tết | 17, 25, 20, 7 | 18, 24, 14, 10 | Đếm ngược, đăng sớm hàng tháng; chọn 2 look Tết |
 | Đồ trẻ 10–16 tuổi | 1, 2 | 03, 02 | Nhân vật teen, bối cảnh trà sữa |
 | Đồ trẻ em (skill riêng) | — | 01–07 (skill trẻ em) | Studio / flatlay / mặc mẫu nhí |
 
@@ -57,6 +59,12 @@ cho cùng 1 món (xem mục "1 món đồ → 3–4 reel" ở cuối).
   đi làm với quần jean mùa thu/đông?" — NuocLoc7Mao 292K lượt xem.
 - **Kiểu 11** (tips 1 món nhiều kiểu, template 14): quần jean mặc
   được nhiều cách.
+- **Kiểu 23** (mở hộp, template 22): jean mới về — Thảo Vy mở hộp
+  quần jeans Daneji 113K lượt xem.
+- **Haul đánh số** (không phải kiểu riêng, là cách đặt chữ): cùng
+  1 áo trên, đổi nhiều quần, đánh số "Quần 1 / Quần 2", "Try on
+  3 jean" — Thảo Vy, haul Bahychic 242K lượt xem; người xem dễ
+  hỏi đúng mã.
 - **Lưu ý bắt buộc:** góc RỘNG toàn thân từ đầu tới giày, quần
   chiếm nửa dưới khung hình — góc hẹp làm người xem tưởng món
   chính là áo. Quần có chi tiết ở túi trước (thêu ngựa): CHỈ quay
@@ -81,6 +89,11 @@ cho cùng 1 món (xem mục "1 món đồ → 3–4 reel" ở cuối).
   sang.
 
 ### Quần tất
+- **Kiểu 22** (phụ kiện làm nhân vật chính, thử theo biến thể,
+  template 21): cùng 1 quần tất/legging mặc qua 2–3 outfit trong
+  1 reel, chữ trên màn hình thay đổi giữa reel để giải thích từng
+  biến thể (độ dày 5D-10D-15D, độ trong, màu) — review im lặng,
+  không voiceover.
 - **Kiểu 9** (demo trên người, template 12), **kiểu 15** (review
   lồng tiếng "Chấm điểm", template 16), **kiểu 8** (cận cảnh
   chứng minh, template 11): ngồi kéo quần tất lên chân, giơ bao
@@ -88,8 +101,10 @@ cho cùng 1 món (xem mục "1 món đồ → 3–4 reel" ở cuối).
 - Bằng chứng mạnh nhất trong cả skill: Thanh Huyền — quần tất
   Arila 132K lượt xem; Huyền Kem — quần tất Dolly Secret 737K
   và 292K (2/3 reel cao nhất kênh); Nhun Lên Đồ — reel giơ quần
-  tất 1,2K like, cao nhất nhóm đồ ngủ. Phụ kiện chức năng có demo
-  bán tốt hơn lookbook thuần túy.
+  tất 1,2K like, cao nhất nhóm đồ ngủ. Đợt 3 — Thảo Vy: quần tất
+  5D-10D-15D BEBECHIC 410K, legging bt19 132K, quần tất len tăm
+  T54 121K (3/5 top kênh). Phụ kiện chức năng có demo bán tốt
+  hơn lookbook thuần túy.
 
 ## 2. Áo
 
@@ -97,9 +112,13 @@ cho cùng 1 món (xem mục "1 món đồ → 3–4 reel" ở cuối).
 - **Kiểu 18** (nhảy nhẹ/lip-sync, template 19): đồ trẻ trung, vui,
   theo trend nhạc. **Kiểu 1** (đi bộ phố). **Kiểu 19** (chuỗi
   1 món cả tuần): 1 áo thun phối nhiều ngày.
+- **Kiểu 24** (chuỗi sưu tập đánh số, template 23): "Tủ đồ 100
+  chiếc áo tay dài" — mỗi reel 1 áo tay dài, đánh số Chiếc số
+  1/2 + tự nhận "đại sứ áo tay dài" (Hoàng Liên Hoa).
 - Bằng chứng: Ninh Anh — áo thun oversize nhảy nhẹ 11K lượt xem;
   NuocLoc7Mao — "Top những món đồ ứng dụng phải gọi tên: Áo thun
-  tay dài" 100K.
+  tay dài" 100K; Hoàng Liên Hoa — áo tay dài oversize quay ngoài
+  trời 90K (reel áo tay dài cao nhất kênh).
 
 ### Áo len / cardigan
 - **Kiểu 11** (tips 1 món nhiều kiểu, template 14): cardigan mặc
@@ -128,6 +147,18 @@ cho cùng 1 món (xem mục "1 món đồ → 3–4 reel" ở cuối).
 - **Kiểu 16** (mở đầu đồ ngủ → outfit công sở, template 17):
   "Đi làm mà phối Áo Sơ Mi đúng là thành quý cô công sở ngay" —
   Phối Đồ Cùng Mei. **Kiểu 5** (lookbook).
+
+### Áo hở lưng
+- **Kiểu 5** (lookbook) + góc quay lưng: với đồ hở lưng, góc quay
+  lưng là góc BÁN CHÍNH — lưng trần chính là điểm bán, không áp
+  dụng quy tắc "không quay lưng" (quy tắc đó chỉ dành cho chi
+  tiết ở mặt trước như thêu túi trước).
+- **Kiểu 21** (đi bộ + giơ đồ, template 20): đi bộ rồi xoay lưng
+  khoe phần hở lưng.
+- Bằng chứng: Hoàng Liên Hoa — áo hai dây lụa satin xanh bạc hà
+  hở lưng, quay từ phía sau: 88K lượt xem, 6,8K like (cao nhất
+  kênh), 21 chia sẻ; cùng mẫu áo xuất hiện 5 lần, lần quay lưng
+  + CTA giỏ hàng đạt hiệu quả cao nhất.
 
 ## 3. Váy / đầm
 
@@ -200,6 +231,12 @@ cho cùng 1 món (xem mục "1 món đồ → 3–4 reel" ở cuối).
 - Đồ ngủ còn dùng làm phần MỞ ĐẦU của **kiểu 16** (đồ ngủ →
   outfit công sở) — ở đó đồ ngủ là đạo cụ hook, không phải món
   bán.
+- Ngoại lệ đợt 3 (Hoàng Liên Hoa): đồ ngủ CHÍNH LÀ trang phục —
+  quần ngủ vàng chấm bi phối áo hai dây (47K, 83K, 18K) và bộ
+  pijama tay dài nguyên bộ (53K). Khác try-on thuần của Nhun: ở
+  đây đồ ngủ được phối thành outfit có chủ đích + caption/CTA rõ
+  ràng ("In4 đồ ở bình luận"). Đồ ngủ cần được STYLING thành
+  outfit, không chỉ đứng mặc lên.
 
 ## 7. Phụ kiện chức năng
 
@@ -256,9 +293,14 @@ tóc — nhóm bán tốt nhất theo bằng chứng lượt xem.
 - **Kiểu 5** (lookbook): áo dài phối lookbook sang — Thảo Nhi
   Shop. **Kiểu 17** (chuỗi đếm ngược Tết, template 18): áo dài
   là sản phẩm Tết chính. **Kiểu 1** (đi bộ phố).
+- **Kiểu 25** ("Chọn đi" hai phong cách, template 24): "Team áo
+  dài hay bà ba" — mặc cả 2 look trong 1 reel, câu hỏi chọn là
+  hook (Vũ Thị Linh, 133K lượt xem, 100 chia sẻ).
 - Bằng chứng: NuocLoc7Mao — try-on áo dài có nhãn riêng ("Try
   on_ ÁO DÀI HỒNG NGHI", "Try on_ ÁO DÀI LINH ĐAN HAVANA"), hook
-  "Tết muốn mặc áo dài tone đỏ nhưng sợ bị dữ?" 225K lượt xem.
+  "Tết muốn mặc áo dài tone đỏ nhưng sợ bị dữ?" 225K lượt xem;
+  Thảo Vy — giơ áo dài lụa ngà trên móc rồi mặc lên ("Tui yêu áo
+  dài", 15K).
 
 ## 12. Đồ công sở
 
@@ -281,9 +323,16 @@ satin thắt nơ, quần ống rộng.
   P[n]" ở editor. 3 kênh cùng làm: Huyền Kem P3–P9, NuocLoc7Mao
   "Còn 88 ngày", reel lẻ "còn 140 ngày nữa đến Tết 2027, ngày 1".
   **Đăng từ hàng tháng trước Tết**, không đợi sát ngày.
+- **Kiểu 25** ("Chọn đi" hai phong cách, template 24): mặc cả 2
+  look Tết trong 1 reel, hỏi "Team áo dài hay bà ba" (Vũ Thị
+  Linh, 133K); teaser giữ đồ: giơ áo dài + áo cổ tàu trước rồi
+  mới mặc ("Nôn tới Tết quá rùi").
 - **Kiểu 20** (chia đôi Thu/Đông vs Tết): cùng 1 món qua 2 dịp.
 - **Kiểu 7** (giơ rồi mặc): outfit đón Tết, dự tiệc — Thanh Huyền
   để toàn bộ link ở bình luận gắn góc Tết.
+- Biến thể đợt 3: nhãn Tết KHÔNG đếm ngược — chữ "outfit / "TẾT
+  2026"" trên reel cardigan đỏ (Machi.clo), chỉ gắn nhãn outfit
+  Tết, không có chuỗi đếm ngược.
 
 ## 14. Đồ trẻ 10–16 tuổi (skill thời trang nữ)
 
@@ -327,6 +376,8 @@ yếu là set đồ trẻ em mặc hằng ngày. 7 template:
 - **Kiểu 7** (giơ rồi mặc): khoe chi tiết trước khi mặc, công thức
   chính của Thanh Huyền.
 - **Kiểu 12** (nhiều look trong 1 reel): khoe nhiều outfit cùng lúc.
+- **Kiểu 21** (đi bộ + giơ đồ trong 1 reel): vừa khoe dáng mặc vừa
+  khoe chi tiết, công thức chính của Machi.clo.
 
 ## 1 món đồ → 3–4 reel
 
@@ -337,6 +388,13 @@ mạnh nhất: Lê Khánh Vân dùng 1 set cho 3 reel, cả 3 đều top 5
 (81K/98K/197K). Ví dụ với quần jean đen: (1) đi bộ phố kiểu 1;
 (2) ngồi quán cà phê kiểu 2; (3) tips chia đôi kiểu 11; (4) so sánh
 mùa kiểu 20.
+
+Tái dùng KHÔNG cần đổi bối cảnh (đợt 3): cùng 1 món đăng lại thành
+nhiều reel riêng với caption khác nhau (Hoàng Liên Hoa: áo lụa
+satin 5 lần, tổng 310K lượt xem); cùng 1 sản phẩm đăng lại nhiều
+bản cắt (cùng caption + nhạc, mở đầu khác — Machi.clo); series
+biến thể màu (cùng mẫu, khác màu, reel riêng — Machi.clo); chuỗi
+sưu tập đánh số (kiểu 24).
 
 ## Quy tắc chung cho mọi video (cả 2 skill)
 
@@ -353,7 +411,7 @@ mùa kiểu 20.
 - Kiểm chứng trước khi giao: phóng to vùng chi tiết, ĐẾM số chi
   tiết ở frame đầu mỗi clip, kiểm tra cả 2 phía của mối nối.
 
-## Phụ lục — Danh sách đầy đủ 20 kiểu (skill thời trang nữ)
+## Phụ lục — Danh sách đầy đủ 25 kiểu (skill thời trang nữ)
 
 1. Đi bộ về phía camera + xoay người (quán cà phê, đường phố) — 01, 03
 2. Ngồi quán cà phê bên cửa sổ — 02
@@ -375,3 +433,8 @@ mùa kiểu 20.
 18. Nhảy nhẹ/lip-sync trong phòng — 19
 19. Chuỗi "1 món mặc cả tuần" theo ngày/dịp — 15 (chuỗi nhiều reel)
 20. Chia đôi so sánh mùa/dịp — 14 (biến thể)
+21. Đi bộ + giơ đồ trong 1 reel — 20
+22. Phụ kiện làm nhân vật chính, thử theo biến thể — 21
+23. Mở hộp (unboxing) rồi mặc thử — 22 (+ 07/10 cho reel mặc thử)
+24. Chuỗi sưu tập đánh số "Tủ đồ 100 chiếc [món]" — 23
+25. "Chọn đi" hai phong cách đối lập — 24

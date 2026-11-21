@@ -1,13 +1,15 @@
 # Video Affiliate Thời Trang Nữ — Phong Cách Reels
 
 Làm video affiliate quần áo thời trang nữ cho Facebook Reels (và
-TikTok) theo 4 phong cách đã quan sát từ tổng cộng 332 Reels: Tô Thu
+TikTok) theo 4 phong cách đã quan sát từ tổng cộng 487 Reels: Tô Thu
 Hà (35 reel), Thảo Nhi Shop (32 reel), Thanh Huyền (40 reel), Nhun
 Lên Đồ (35 reel), Thuỷ Thuỷ Boutique (1 reel), Ninh Anh (30 reel),
 Khánh Chi Daily (17 reel — toàn bộ kênh), Lê Khánh Vân (40 reel),
 Phối Đồ Cùng Mei (40 reel), NuocLoc7Mao (30 reel), Huyền Kem
 (30 reel), Thảo Nguyên Daily (1 reel), Lương 5 triệu mặc gì đây ?
-(1 reel). Chi tiết phân tích ở `~/workspace/fashion-affiliate-women/`:
+(1 reel), Machi.clo (35 reel), Hoàng Liên Hoa (40 reel), Vũ Thị
+Linh (40 reel), Thảo Vy (40 reel). Chi tiết phân tích ở
+`~/workspace/fashion-affiliate-women/`:
 `analysis-to-thu-ha-reels.md`, `analysis-thao-nhi-shop-reels.md`,
 `analysis-thanh-huyen-reels.md`, `analysis-nhun-len-do-reels.md`,
 `analysis-reel-1479507580953286.md`,
@@ -16,7 +18,9 @@ Phối Đồ Cùng Mei (40 reel), NuocLoc7Mao (30 reel), Huyền Kem
 `analysis-phoi-do-cung-mei-reels.md`,
 `analysis-nuocloc7mao-reels.md`, `analysis-huyen-kem-reels.md`,
 `analysis-reel-1840153680605228.md`,
-`analysis-reel-1734056391187699.md`. TikTok @quynhtrang3108_
+`analysis-reel-1734056391187699.md`,
+`analysis-machi-clo-reels.md`, `analysis-hoang-lien-hoa-reels.md`,
+`analysis-vu-thi-linh-reels.md`, `analysis-thao-vy-reels.md`. TikTok @quynhtrang3108_
 ("Chang mặc gì ?") chưa xem được video nào do TikTok chặn (403) —
 chỉ ghi lại được lưới 35 video, xem
 `analysis-quynhtrang3108-tiktok.md`; chưa đưa gì từ kênh này vào
@@ -89,6 +93,21 @@ với luồng gateway trong 1 job.
   template 08. Template 17. Ngách đồ công sở của Mei (blazer,
   chân váy dài đuôi cá, áo satin thắt nơ) với thông điệp "sang,
   thanh lịch, hack tuổi" trên ngân sách thấp ("lương 3tr/5tr").
+- Bổ sung đợt 3 — 2 biến thể mới của phòng cố định im lặng:
+  (1) One-take im lặng + chuỗi sưu tập đánh số (Hoàng Liên Hoa,
+  6,7K followers Facebook, TikTok 1,2M, 40 reel): chỉ 3 bối cảnh
+  cố định (phòng rèm voan, khung cửa gỗ, sân gỗ nhà gỗ), 1 reel =
+  1 outfit = 1 take liên tục, im lặng 100%, nhún nhảy nhẹ tại
+  chỗ, kéo gấu áo khoe độ ôm, quay lưng khoe lưng trần (reel áo
+  lụa hở lưng 6,8K like — cao nhất kênh). Series "Tủ đồ 100
+  chiếc áo tay dài" đánh số Chiếc số 1/2 + tự nhận "đại sứ áo
+  tay dài". Template 23. (2) Vlog thử đồ ở phòng thử đồ + câu
+  hỏi chọn 2 phong cách (Vũ Thị Linh, 21K followers, 40 reel):
+  voiceover tiếng Việt kể chuyện thử đồ ở studio, POV cầu thang
+  + selfie gương, hỏi "bánh bèo hay xì lay" (162K lượt xem);
+  biến thể Tết mặc cả 2 look (áo dài và bà ba) trong 1 reel,
+  hỏi "Team áo dài hay bà ba" (133K). Video sinh ra vẫn SẠCH —
+  lời nói do user thu voiceover sau. Template 24.
 
 ### C. Review giơ đồ trong phòng cố định (Thanh Huyền)
 
@@ -131,6 +150,20 @@ với luồng gateway trong 1 job.
   Template 16. Phụ kiện chức năng lại chiếm top: 2/3 reel cao
   nhất kênh là về quần tất (737K, 292K lượt xem) — khớp bài học
   ở Thanh Huyền.
+- Bổ sung đợt 3 — 3 biến thể mới của phòng cố định: (1) Lai đi
+  bộ + giơ đồ trong 1 reel (Machi.clo, shop 4,9K followers, 35
+  reel): hành lang hẹp tường trắng làm studio cố định, đi dọc
+  hành lang rồi giơ chính món đang mặc lên cận cảnh chất vải —
+  giơ đồ là 1 nhịp trong reel mặc đồ, không phải toàn bộ reel.
+  Reel cao nhất kênh 159K lượt xem. Template 20. (2) Review im
+  lặng bằng chữ trên màn hình thay đổi giữa reel (Thảo Vy, 64K
+  followers, 40 reel): quần tất/legging làm nhân vật chính, thử
+  qua 2–3 outfit trong 1 reel, chữ đổi từ tên shop + mã sang câu
+  lợi ích ("Độ D càng thấp độ trong càng cao"). 3/5 top kênh là
+  reel quần tất (410K, 132K, 121K). Template 21. (3) Unboxing
+  thành format riêng rồi nối tiếp bằng reel try-on (Thảo Vy):
+  thùng carton/bưu kiện làm đạo cụ, mở hộp giơ đồ lên, reel sau
+  mặc thử ("Try on 2 set trong vid unbox mí bà nè"). Template 22.
 
 ### D. Tips phối đồ chia đôi màn hình + try-on phòng cố định (Nhun Lên Đồ)
 
@@ -254,6 +287,74 @@ là công thức chính của cả kênh (template 10).
   lượng followers — nhưng độ chênh lệch trong cùng 1 kênh rất lớn
   (Huyền Kem: 689 lượt xem ở reel thấp nhất vs 737K ở reel cao
   nhất), hiệu quả phụ thuộc mạnh vào sản phẩm và hook.
+- Đợt 3 (2026-11-21, 155 reel, 4 kênh): quần tất/legging làm nhân
+  vật chính với chữ trên màn hình thay đổi giữa reel là dạng
+  review im lặng mới — Thảo Vy 410K (5D-10D-15D), 132K (legging
+  bt19), 121K (quần tất len tăm T54); 3/5 top kênh. Template 21.
+- Haul đánh số để đặt hàng: "Quần 1 / Quần 2", "Try on 3 jean" —
+  cùng 1 áo trên, đổi nhiều quần, số thứ tự thay cho tên món
+  (Thảo Vy, haul Bahychic 242K lượt xem).
+- Unboxing là 1 format riêng (thùng carton/bưu kiện làm đạo cụ),
+  nối tiếp bằng reel try-on riêng — Thảo Vy. Template 22.
+- Chuỗi sưu tập đánh số "Tủ đồ 100 chiếc [món]" + tự nhận "đại
+  sứ [món]" — Hoàng Liên Hoa. Template 23.
+- Tái dùng 1 món đồ KHÔNG gắn nhãn series: cùng 1 món đăng lại
+  thành nhiều reel riêng, caption khác nhau — Hoàng Liên Hoa:
+  áo lụa satin xanh bạc hà 5 lần (tổng 310K lượt xem), đầm body
+  đỏ rượu 4 lần (176K); Machi.clo: cùng sản phẩm đăng lại nhiều
+  bản cắt (cùng caption + nhạc, mở đầu khác). Bổ sung cho quy tắc
+  1 outfit → 3–4 reel: tái dùng có thể là đăng lại cùng món với
+  caption/cắt khác, không nhất thiết đổi bối cảnh.
+- Series biến thể màu: cùng 1 mẫu, cùng mẫu caption, khác màu,
+  đăng thành reel riêng (Machi.clo: áo len trễ vai tím/xám/trắng).
+- Góc quay lưng là góc BÁN CHÍNH với đồ hở lưng — Hoàng Liên Hoa:
+  reel áo lụa hở lưng quay từ phía sau đạt 6,8K like, cao nhất
+  kênh. Quy tắc "không quay lưng" CHỈ áp dụng khi chi tiết bán
+  nằm ở MẶT TRƯỚC (thêu túi trước...); với đồ hở lưng, lưng trần
+  chính là điểm bán.
+- Hook theo dáng người: "Dáng tam giác ngược bơi vô đây liền
+  chontui" — Vũ Thị Linh, 169K lượt xem, cao nhất kênh. Tư vấn
+  theo dáng, không theo món/mùa.
+- Hook theo yêu cầu khán giả: "Hôm bữa bà nào hỏi in4 em váy xanh
+  nì, hôm nay tui lên video cho mấy bà luôn nha" — nội dung do
+  bình luận kéo theo (Vũ Thị Linh, 58K).
+- Góc mặc lại đồ cũ: "Chiếc áo tui mặc từ năm ngoái, năm nay lại
+  mặc lại" — Thảo Vy, 179K lượt xem. Không phải lúc nào cũng mua
+  mới.
+- Hook "1 outfit cho 3 dịp" (mùa thu + noel + tết) và hook set
+  mix-match ("Mua được set đồ mà có thể mixmatch thành nhìu
+  outfit thì mấy bà có ưng không…", 113K) — Vũ Thị Linh.
+- Chữ chứng minh chi tiết cấu tạo trên màn hình: "có đệm ngực được
+  may chắc chắn", "chân váy dạ chéo (có khoá kéo hai bên)" —
+  Machi.clo. Chữ không chỉ đặt tên mà CHỨNG MINH 1 chi tiết may
+  mặc (chỉ ghi điều đã xác nhận).
+- Tên shop + mã sản phẩm gắn ngay trên màn hình mỗi reel (Thảo
+  Vy) — mỗi reel là 1 lần thử đồ theo shop, không phải lookbook
+  chung chung.
+- CTA tiến hóa theo thời gian (Hoàng Liên Hoa): không CTA → "để
+  ở bình luận ghim" → "để ở bình luận" → "ghim sẵn dưới giỏ
+  hàng". Shop bán trực tiếp dùng CTA bình luận "(.)" để báo giá
+  qua inbox + gợi ý giá "3xx/2xx/1xx" và khan hiếm (Machi.clo) —
+  chỉ dùng khi user là shop và xác nhận giá.
+- Công khai số đo/dáng người tiếp tục lặp lại: Thảo Vy ghi
+  "M60_47kg" ngay trong tiểu sử (kênh thứ 4 công khai số đo, sau
+  Nhun, NuocLoc7Mao, Huyền Kem).
+- Đồ ngủ CHÍNH LÀ trang phục (không phải mở đầu): Hoàng Liên Hoa
+  mặc quần ngủ + áo hai dây và bộ pijama nguyên bộ, đạt 47K–83K
+  lượt xem — khác try-on đồ ngủ thuần của Nhun (258–5,7K): ở đây
+  đồ ngủ được phối thành outfit có chủ đích + caption/CTA rõ
+  ràng. Bài học "không try-on đồ ngủ thuần" vẫn đúng; đồ ngủ cần
+  được STYLING thành outfit hoặc gắn tips/nhiều look.
+- Caption chỉ có emoji ("🫰✨", "✌️✨") vẫn hút xem khi hook nằm
+  ở chữ trên màn hình + tên shop (Thảo Vy) — caption dài không
+  phải lúc nào cũng cần.
+- Chi tiết nhỏ (trang sức, khuyên tai, nhẫn, nút, họa tiết) dễ BIẾN
+  MẤT giữa chừng khi nhân vật cử động — model vẽ lại từng frame
+  nên chi tiết chỉ chiếm vài pixel hay bị "quên" lúc chuyển động
+  nhanh (user phát hiện 2026-11-21). Khắc phục: câu giữ phụ kiện
+  trong mọi prompt + mỗi clip 1 hành động chậm + cận cảnh riêng
+  cho chi tiết quan trọng; kiểm chứng phải xem nhiều frame giữa
+  clip, không chỉ frame đầu.
 
 ## Công thức 1 reel (phong cách A)
 
@@ -278,6 +379,11 @@ là công thức chính của cả kênh (template 10).
    19): nhảy nhẹ/lắc hông/lip-sync theo nhạc trong phòng cố định.
    **Biến thể mở đầu đồ ngủ** (template 17): mở đầu đồ ngủ nói
    chuyện → cắt cảnh sang outfit trên nền nhạc.
+   **Biến thể chuỗi sưu tập** (template 23): mỗi reel 1 món, cùng
+   bối cảnh/góc quay, chữ "Tủ đồ 100 chiếc [món] / Chiếc số [N]"
+   ở editor. **Biến thể "Chọn đi"** (template 24): 2 clip 2 phong
+   cách đối lập, câu hỏi chọn ở caption; voiceover vlog tùy chọn
+   do user thu sau.
 3. **CTA ngầm:** caption ngắn + bình luận/inbox; không ghi
    giá/mã/size.
 
@@ -295,6 +401,12 @@ là công thức chính của cả kênh (template 10).
    Trước/Sau mặc. **Dạng lồng tiếng** (template 16): demo + giơ
    bao bì/kéo vạt khoe lót lông, giọng review lồng tiếng do user
    thu sau, chữ "Chấm điểm [sản phẩm]" ở editor.
+   **Dạng lai đi bộ + giơ đồ** (template 20): đi bộ trong hành
+   lang rồi giơ món đang mặc lên cận cảnh chất vải. **Dạng phụ
+   kiện nhiều biến thể** (template 21): cùng 1 phụ kiện mặc qua
+   2–3 outfit, chữ trên màn hình đổi theo clip để giải thích từng
+   biến thể. **Dạng mở hộp** (template 22): mở thùng/bưu kiện,
+   giơ đồ lên; reel mặc thử sau đó dùng template 07 hoặc 10.
 4. **CTA rõ ràng nhất trong 3 phong cách:** caption mẫu link
    Shopee + có thể chia link (món chính ở caption, món còn lại
    ở bình luận) hoặc end-card khoanh đỏ link ở cuối video — làm
@@ -334,6 +446,21 @@ là công thức chính của cả kênh (template 10).
   same cut, same stitching, same details in the exact same
   positions. Do not redesign, recolour, add, remove or move any
   detail." Camera tĩnh, chuyển động chậm để chi tiết ít trôi.
+- Giữ nguyên TRANG SỨC/PHỤ KIỆN như giữ sản phẩm: liệt kê từng món
+  (dây chuyền, khuyên tai, nhẫn, đồng hồ, vòng tay, kẹp tóc...) kèm
+  vị trí đeo. Mọi prompt PHẢI kèm câu: "Keep every accessory
+  exactly as in the reference photos: [ACCESSORIES with positions].
+  They stay on her body and visible in every frame from start to
+  finish — never vanish, change shape, or swap sides during
+  movement." Ảnh không có trang sức thì ghi rõ "no jewellery or
+  accessories" để model khỏi tự thêm. Chi tiết nhỏ chỉ chiếm vài
+  pixel nên dễ biến mất giữa chừng khi nhân vật cử động.
+- MỖI CLIP CHỈ 1 HÀNH ĐỘNG CHÍNH, chuyển động CHẬM và nhẹ nhàng:
+  đi bộ HOẶC xoay người HOẶC giơ đồ trong 1 clip — không gộp nhiều
+  động tác nhanh. Cử động càng nhanh/phức tạp càng dễ rớt chi tiết
+  nhỏ. Chi tiết nhỏ quan trọng thì quay riêng 1 cảnh cận cảnh
+  (template 11/12) thay vì trông chờ clip đi bộ giữ nó — chi tiết
+  càng to trong khung hình càng khó mất.
 - Dọc 9:16. Một cảnh duy nhất mỗi reel (trừ template 06, 10 có 1
   lần cắt cảnh giơ hàng → mặc hàng; template 13, 14 sinh 2 clip
   cùng dáng để ghép chia đôi ở editor), máy quay gần như tĩnh, ít
@@ -367,8 +494,9 @@ là công thức chính của cả kênh (template 10).
   nói trực tiếp), C (review giơ đồ trong phòng cố định) hay D
   (tips phối đồ chia đôi màn hình / nhiều look trong 1 reel).
   Mặc định là A nếu user không nói.
-- Với phong cách B dạng nói (template 08) và dạng lồng tiếng
-  (template 16, 17): hỏi user có tự thu voiceover không hay chỉ
+- Với phong cách B dạng nói (template 08), dạng lồng tiếng
+  (template 16, 17) và dạng "Chọn đi" có voiceover vlog tùy chọn
+  (template 24): hỏi user có tự thu voiceover không hay chỉ
   cần bản im lặng.
 - Dòng chữ POV user muốn dùng (nếu muốn hook chữ), hoặc để Muse
   gợi ý theo template.
@@ -431,6 +559,13 @@ Phong cách B — lookbook trong nhà / nói trực tiếp:
   phòng cố định, góc máy hơi thấp; biến thể selfie trước gương
   phòng gym cho đồ tập. Dùng cho đồ trẻ trung, đồ dạo phố, áo
   thun oversize, áo trễ vai, chân váy mini, quần short.
+- `23-collection-series.md` — chuỗi sưu tập đánh số "Tủ đồ 100
+  chiếc [món]": mỗi reel 1 món, cùng bối cảnh/góc quay, chữ số
+  thứ tự ở editor. Dùng cho shop/creator có nhiều món cùng 1 loại.
+- `24-choose-two-styles.md` — "Chọn đi" hai phong cách đối lập
+  trong 1 reel (bánh bèo vs xì lay, áo dài vs bà ba); câu hỏi
+  chọn là hook chính; voiceover vlog tùy chọn do user thu sau.
+  Dùng khi có 2 phong cách để người xem chọn.
 
 Phong cách C — review giơ đồ trong phòng cố định:
 
@@ -451,6 +586,17 @@ Phong cách C — review giơ đồ trong phòng cố định:
   lót lông), giọng nói lồng tiếng do user thu sau. Dùng cho phụ
   kiện chức năng, đồ giữ nhiệt, boots/giày, món cần đánh giá
   bằng lời.
+- `20-walk-holdup-hybrid.md` — đi bộ trong hành lang + giơ đồ lên
+  cận cảnh trong cùng 1 reel; giơ đồ là 1 nhịp, không phải toàn
+  bộ reel. Dùng cho món vừa cần khoe dáng mặc vừa có chi tiết
+  đáng khoe.
+- `21-tights-variants.md` — phụ kiện (quần tất/legging) làm nhân
+  vật chính, thử qua 2–3 outfit trong 1 reel, chữ trên màn hình
+  thay đổi giữa reel để giải thích từng biến thể. Dùng cho phụ
+  kiện có nhiều biến thể (độ dày, màu).
+- `22-unboxing-try-on.md` — mở hộp hàng mới về (thùng carton/bưu
+  kiện làm đạo cụ) rồi giơ đồ lên; reel mặc thử tiếp theo dùng
+  template 07 hoặc 10. Dùng cho hàng mới về từ 1 shop.
 
 Phong cách D — tips phối đồ / nhiều look:
 
@@ -487,7 +633,11 @@ năng → 12; đồ định hình → 13; món mặc được nhiều kiểu →
 1 reel hài cùng outfit → 05; món cần đánh giá bằng lời nói lồng
 tiếng → 16; muốn mở đầu bằng câu chuyện/tình huống rồi biến hình
 sang outfit → 17; đồ Tết làm thành chuỗi đếm ngược → 18; đồ trẻ
-trung muốn nhảy nhẹ theo nhạc → 19.
+trung muốn nhảy nhẹ theo nhạc → 19; món vừa cần khoe dáng mặc vừa
+có chi tiết đáng khoe → 20; phụ kiện có nhiều biến thể (độ dày,
+màu) → 21; hàng mới về muốn mở hộp → 22; nhiều món cùng 1 loại
+làm thành chuỗi sưu tập → 23; 2 phong cách đối lập để người xem
+chọn → 24.
 
 ## Chữ POV + caption + hashtag (giao kèm video, thêm ở editor)
 
@@ -525,6 +675,24 @@ trung muốn nhảy nhẹ theo nhạc → 19.
 - Hook DỊP CỤ THỂ (Thảo Nguyên Daily): "Mua [món] mặc đi [nơi]
   chưa biết phối sao thì thử ngay [số] outfit này nhé" — mua đồ
   cho 1 chuyến đi/dịp cụ thể.
+- Hook DÁNG NGƯỜI (Vũ Thị Linh, 169K lượt xem): "Dáng [tam giác
+  ngược] bơi vô đây liền" — gọi đúng nhóm dáng người rồi hứa món
+  đồ hợp dáng đó.
+- Hook YÊU CẦU KHÁN GIẢ (Vũ Thị Linh, 58K): "Hôm bữa bà nào hỏi
+  in4 em [món] nì, hôm nay tui lên video cho mấy bà luôn nha" —
+  nội dung do bình luận kéo theo.
+- Hook MẶC LẠI ĐỒ CŨ (Thảo Vy, 179K): "Chiếc áo tui mặc từ năm
+  ngoái, năm nay lại mặc lại" — không phải lúc nào cũng mua mới.
+- Hook 1 OUTFIT NHIỀU DỊP (Vũ Thị Linh, 66K): "1 outfit cho 3 dịp
+  mùa thu + noel + tết".
+- Hook MIX-MATCH (Vũ Thị Linh, 113K): "Mua được set đồ mà có thể
+  mixmatch thành nhìu outfit thì mấy bà có ưng không…".
+- Hook SƯU TẬP ĐÁNH SỐ (Hoàng Liên Hoa): "Tủ đồ 100 chiếc [món] /
+  Chiếc số [N]" + tự nhận "đại sứ [món]" — chuỗi dài, mỗi reel
+  1 món.
+- Chữ CHỨNG MINH cấu tạo (Machi.clo): "có đệm ngực được may chắc
+  chắn", "chân váy dạ chéo (có khoá kéo hai bên)" — chữ chứng minh
+  1 chi tiết may mặc, chỉ ghi điều đã xác nhận.
 - Caption: 1 câu ngắn + 1–2 emoji, giọng như đang kể với bạn.
   Có thể thêm câu chốt nhẹ kiểu "+1 em… nên có trong tủ đồ" khi
   user đồng ý giọng chốt đơn. Không liệt kê thông số trong caption
@@ -537,7 +705,10 @@ trung muốn nhảy nhẹ theo nhạc → 19.
 - CTA biến thể mới: link mua ở BÌNH LUẬN (ghi trong tiểu sử trang,
   Phối Đồ Cùng Mei); link gắn ở GÓC TRÁI video + dưới bình luận
   (Huyền Kem); mã giảm trong bio (Ninh Anh: "có mã giảm 55k trong
-  bio nha").
+  bio nha"); ghim sẵn dưới GIỎ HÀNG trên video (Hoàng Liên Hoa,
+  Vũ Thị Linh — ghi trong tiểu sử "mua hàng vui lòng bấm vào giỏ
+  hàng trên video"); bình luận "(.)" để báo giá qua inbox — chỉ
+  cho shop bán trực tiếp (Machi.clo).
 - Chữ tên sản phẩm + thương hiệu trên màn hình (phong cách C):
   gợi ý 1 dòng ngắn ("[Tên món] [thương hiệu]") để user thêm ở
   editor — reel có chữ này đạt lượt xem rất cao ở kênh Thanh Huyền.
@@ -549,11 +720,11 @@ trung muốn nhảy nhẹ theo nhạc → 19.
   `#modestdressing`, `#vaylua`).
 - Nhạc: nhạc Việt remix / nhạc thịnh hành, user chọn trong thư viện
   nhạc của Facebook/TikTok lúc đăng (nhạc không sinh cùng video).
-- Voiceover (template 08, 16, 17): giao kèm kịch bản nói
+- Voiceover (template 08, 16, 17, 24): giao kèm kịch bản nói
   ngắn 3–4 câu (chào + tên món + 2 điểm nổi bật + mời inbox),
   user tự thu và lồng vào video lúc đăng. Template 16 là lồng
   tiếng review ("Chấm điểm"), template 17 là lời nói ở đoạn mở
-  đầu đồ ngủ.
+  đầu đồ ngủ, template 24 là lời kể vlog thử đồ (tùy chọn).
 
 ## 1 outfit → 3–4 reels
 
@@ -571,6 +742,12 @@ mặc cả tuần" thành chuỗi nhiều reel (mỗi reel 1 Look, đánh số L
   (template 01); (2) ngồi ghế sau ô tô, tay chống má (template 09);
   (3) ngoài trời, tạo dáng nghiêng/lưng (template 03); (4) đi bộ
   trên phố, kéo nhẹ gấu quần (template 03, góc khác).
+- Tái dùng KHÔNG cần đổi bối cảnh (đợt 3): cùng 1 món đăng lại
+  thành nhiều reel riêng với caption khác nhau (Hoàng Liên Hoa:
+  áo lụa satin 5 lần, tổng 310K lượt xem); cùng 1 sản phẩm đăng
+  lại nhiều bản cắt (cùng caption + nhạc, mở đầu khác — Machi.clo);
+  series biến thể màu (cùng mẫu, khác màu, reel riêng — Machi.clo);
+  chuỗi sưu tập đánh số (template 23).
 - Liệt kê các combo trước để user thấy sự khác nhau, rồi làm từng
   reel một. Tối đa 6 video mỗi lượt nhắn, nên 3–4 reel x 2 clip =
   6–8 clip có thể cần 2 lượt.
@@ -604,7 +781,11 @@ mặc cả tuần" thành chuỗi nhiều reel (mỗi reel 1 Look, đánh số L
    số chi tiết (hình thêu, nút, logo), kiểm tra vị trí từng chi
    tiết — nếu sản phẩm lệch (thêm/bớt chi tiết, đổi màu, đổi vị
    trí họa tiết), sinh lại clip đó, không giao video có sản phẩm
-   bị thay đổi. Nếu clip chỉ lỗi chi tiết trong vài giây đầu rồi
+   bị thay đổi. Kiểm tra CẢ trang sức/phụ kiện ở 3 điểm trong mỗi
+   clip (đầu, giữa, cuối) — chi tiết nhỏ có thể đúng ở frame đầu
+   nhưng biến mất giữa clip; nếu mất ở giữa thì cắt bỏ đoạn lỗi
+   hoặc sinh lại clip đó. Nếu clip chỉ lỗi chi tiết trong vài giây
+   đầu rồi
    tự hết, CẮT BỎ đoạn đầu lỗi bằng ffmpeg rồi ghép phần còn lại
    — đừng sinh lại mù quáng (sinh lại là xổ số: 3 lần liên tiếp
    đều đặt hình thêu sai bên túi dù đã ghi rõ neo tay cầm cà phê).
@@ -613,14 +794,18 @@ mặc cả tuần" thành chuỗi nhiều reel (mỗi reel 1 Look, đánh số L
    cảnh quay lưng/đi ra xa — model chuyển chi tiết sang túi sau
    (thậm chí nhân đôi) dù đã ghi rõ "back pockets plain" / "never
    turn back"; nghiêng hẳn (profile) cũng lộ túi sau và model thêu
-   thêm chi tiết ở đó. File tồn tại chưa đủ — phải kiểm số. Lưu ý:
+   thêm chi tiết ở đó. Ngoại lệ: với đồ HỞ LƯNG, góc quay lưng là
+   góc bán chính — lưng trần chính là điểm bán (Hoàng Liên Hoa:
+   reel áo lụa hở lưng quay từ phía sau đạt 6,8K like, cao nhất
+   kênh). Quy tắc "không quay lưng" chỉ áp dụng khi chi tiết bán
+   nằm ở mặt trước. File tồn tại chưa đủ — phải kiểm số. Lưu ý:
    resume
    giữ được quần áo/bối cảnh nhưng có thể đổi kiểu tóc/góc quay —
    phải ghi rõ trong prompt clip sau và kiểm tra lại; sinh mới
    hoàn toàn (không resume) dễ lệch màu quần và góc quay hơn.
 5. Giao video kèm: 2–3 câu POV để chọn (nếu user muốn hook chữ),
    1 caption gợi ý, hashtag, kịch bản voiceover ngắn (nếu là
-   template 08, 16 hoặc 17), và ghi chú user tự thêm chữ POV +
+   template 08, 16, 17 hoặc 24), và ghi chú user tự thêm chữ POV +
    nhạc + link affiliate trong editor lúc đăng.
 6. Muốn thêm bản khác: đổi 1 yếu tố mỗi lần (góc quay, bối cảnh,
    hoặc câu POV), không dựng lại từ đầu.

@@ -1,10 +1,11 @@
 # Các phong cách làm video — chia nhỏ theo kênh (để user lựa chọn)
 
 Ngày lập: 2026-11-19. Bổ sung 2026-11-20: kiểu 15–20 (6 kênh mới
-+ 2 reel lẻ). Mỗi kênh có 1 phong cách riêng; bảng này chia nhỏ
-thành 20 kiểu cụ thể để user chọn. Số thứ tự 1–20 là số để user
-gọi khi chọn ("làm kiểu số 7"); cột template là prompt tương ứng
-trong `prompts/`.
++ 2 reel lẻ). Bổ sung 2026-11-21: kiểu 21–25 (4 kênh mới: Machi.clo,
+Hoàng Liên Hoa, Vũ Thị Linh, Thảo Vy). Mỗi kênh có 1 phong cách
+riêng; bảng này chia nhỏ thành 25 kiểu cụ thể để user chọn. Số thứ
+tự 1–25 là số để user gọi khi chọn ("làm kiểu số 7"); cột template
+là prompt tương ứng trong `prompts/`.
 
 ## Tô Thu Hà (35 reel) — Đời sống im lặng, bối cảnh thay đổi
 
@@ -111,6 +112,47 @@ trong `prompts/`.
     ngược Tết ("Còn 88 ngày nữa là đến Tết") — xem kiểu 17.
     → template 14 (biến thể).
 
+## Machi.clo (35 reel) — Shop, đi bộ + giơ đồ trong hành lang
+
+21. Đi bộ trong hành lang + giơ đồ lên cận cảnh trong cùng 1 reel:
+    đi dọc hành lang hẹp tường trắng rồi giơ chính món đang mặc
+    lên khoe vải/cúc/đệm ngực — giơ đồ là 1 nhịp, không phải toàn
+    bộ reel. Reel cao nhất kênh 159K lượt xem. Chữ chứng minh
+    cấu tạo ("có đệm ngực được may chắc chắn") thêm ở editor.
+    → template 20.
+
+## Thảo Vy (40 reel) — Quần tất làm nhân vật chính + unboxing
+
+22. Phụ kiện làm nhân vật chính, thử theo biến thể: quần tất/
+    legging mặc qua 2–3 outfit trong 1 reel, chữ trên màn hình
+    thay đổi giữa reel để giải thích từng biến thể (độ dày,
+    độ trong, màu) — review im lặng, không voiceover. 3/5 top
+    kênh là reel quần tất (410K, 132K, 121K lượt xem).
+    → template 21.
+23. Mở hộp (unboxing) rồi mặc thử: thùng carton/bưu kiện làm đạo
+    cụ, mở hộp giơ đồ lên; reel sau mặc thử đồ vừa mở ("Try on
+    2 set trong vid unbox mí bà nè"). Hàng mới về từ 1 shop.
+    → template 22 (reel mở hộp) + template 07/10 (reel mặc thử).
+
+## Hoàng Liên Hoa (40 reel) — One-take im lặng + chuỗi sưu tập
+
+24. Chuỗi sưu tập đánh số "Tủ đồ 100 chiếc [món]": mỗi reel 1 món,
+    cùng bối cảnh/góc quay, chữ "Tủ đồ 100 chiếc [món] / Chiếc
+    số [N]" ở editor + tự nhận "đại sứ [món]". Dạng CHUỖI nhiều
+    reel. Kênh gốc: 1 reel = 1 outfit = 1 take liên tục, im lặng
+    100%, kéo gấu áo khoe độ ôm, quay lưng khoe lưng trần (reel
+    áo lụa hở lưng 6,8K like — cao nhất kênh).
+    → template 23.
+
+## Vũ Thị Linh (40 reel) — "Chọn đi" hai phong cách + hook dáng người
+
+25. "Chọn đi" hai phong cách đối lập trong 1 reel: mỗi phong cách
+    1 clip (bánh bèo vs xì lay, áo dài vs bà ba), câu hỏi chọn là
+    hook chính; voiceover vlog phòng thử đồ tùy chọn do user thu
+    sau. Reel cao nhất dạng này 162K lượt xem; biến thể Tết
+    (áo dài vs bà ba) 133K.
+    → template 24.
+
 ## Lê Khánh Vân (40 reel) — Đời sống im lặng, lụa sang ngoài phố
 
 Phong cách A thuần túy nhất: lụa/satin "sang", đi bộ ngoài phố, im
@@ -132,7 +174,8 @@ tái dùng 3 reel, cả 3 đều nằm trong top 5 lượt xem của kênh.
 
 - Tất cả các kiểu đều: dọc 9:16, máy tĩnh, video sinh ra sạch (không
   chữ, không lời nói) — chữ/caption/nhạc user thêm ở editor lúc đăng.
-- Kiểu 6, 15, 16 là các kiểu có "nói" — nhưng lời nói do user tự thu
-  voiceover sau, video sinh ra vẫn im lặng.
-- Kiểu 17 và 19 là dạng CHUỖI nhiều reel, không phải 1 reel đơn.
+- Kiểu 6, 15, 16, 25 là các kiểu có "nói" — nhưng lời nói do user
+  tự thu voiceover sau, video sinh ra vẫn im lặng.
+- Kiểu 17, 19 và 24 là dạng CHUỖI nhiều reel, không phải 1 reel đơn.
+- Kiểu 23 là 2 reel liên tiếp (mở hộp rồi mặc thử).
 - User chọn theo số (có thể chọn nhiều kiểu, ví dụ "1, 7, 11").

@@ -2,7 +2,7 @@
 
 Project cho skill `fashion-affiliate-women`: video affiliate quần áo
 thời trang nữ cho Facebook Reels / TikTok, theo 4 phong cách quan sát
-từ tổng cộng 332 Reels: Tô Thu Hà (35 reel, đời sống im lặng),
+từ tổng cộng 487 Reels: Tô Thu Hà (35 reel, đời sống im lặng),
 Thảo Nhi Shop (32 reel, lookbook trong nhà + nói trực tiếp),
 Thanh Huyền (40 reel, review giơ đồ trong phòng cố định),
 Nhun Lên Đồ (35 reel, tips phối đồ chia đôi màn hình),
@@ -12,10 +12,14 @@ Lê Khánh Vân (40 reel, lụa sang ngoài phố),
 Phối Đồ Cùng Mei (40 reel, mở đầu đồ ngủ → outfit công sở),
 NuocLoc7Mao (30 reel, OOTD + so sánh mùa),
 Huyền Kem (30 reel, review lồng tiếng + chuỗi đếm ngược Tết),
-Thảo Nguyên Daily (1 reel), Lương 5 triệu mặc gì đây ? (1 reel).
+Thảo Nguyên Daily (1 reel), Lương 5 triệu mặc gì đây ? (1 reel),
+Machi.clo (35 reel, đi bộ + giơ đồ trong hành lang),
+Hoàng Liên Hoa (40 reel, one-take im lặng + chuỗi sưu tập),
+Vũ Thị Linh (40 reel, "Chọn đi" hai phong cách),
+Thảo Vy (40 reel, quần tất làm nhân vật chính + unboxing).
 Xem các file `analysis-*.md` để biết chi tiết.
 
-- `prompts/` — 19 template: 01 sân thượng quán cà phê, 02 ngồi quán
+- `prompts/` — 24 template: 01 sân thượng quán cà phê, 02 ngồi quán
   cạnh cửa sổ, 03 đi bộ trên phố, 04 sân pickleball, 05 cận mặt hài,
   06 giơ hàng lên trước rồi mặc lên sau, 07 lookbook trong nhà,
   08 trình bày trực tiếp (user thu voiceover sau), 09 ngồi ghế sau
@@ -24,8 +28,11 @@ Xem các file `analysis-*.md` để biết chi tiết.
   chia đôi màn hình (ghép ở editor), 14 tips "1 món mặc nhiều kiểu"
   chia đôi màn hình, 15 nhiều look trong 1 reel, 16 review lồng
   tiếng "Chấm điểm", 17 mở đầu đồ ngủ → cắt sang outfit, 18 chuỗi
-  đếm ngược Tết, 19 nhảy nhẹ/lip-sync trong phòng.
-- `phong-cach-lua-chon.md` — bảng chọn 20 kiểu theo số.
+  đếm ngược Tết, 19 nhảy nhẹ/lip-sync trong phòng, 20 đi bộ + giơ
+  đồ trong 1 reel, 21 phụ kiện làm nhân vật chính thử theo biến
+  thể, 22 mở hộp rồi mặc thử, 23 chuỗi sưu tập đánh số "Tủ đồ 100
+  chiếc [món]", 24 "Chọn đi" hai phong cách đối lập.
+- `phong-cach-lua-chon.md` — bảng chọn 25 kiểu theo số.
 - `tong-hop-skill-theo-trang-phuc.md` — tổng hợp kiểu làm video
   theo từng loại trang phục bán.
 - `input/` — ảnh sản phẩm của từng job (không commit lên repo công khai).
